@@ -1,0 +1,8 @@
+2025-06-04 23:48:31,073 - L\u1ea7n g\u1ecdi API th\u1ee9 1
+2025-06-04 23:48:34,123 - L\u1ea7n g\u1ecdi API th\u1ee9 2
+2025-06-04 23:48:37,112 - L\u1ea7n g\u1ecdi API th\u1ee9 3
+2025-06-04 23:48:40,092 - L\u1ea7n g\u1ecdi API th\u1ee9 4
+2025-06-04 23:48:43,110 - L\u1ea7n g\u1ecdi API th\u1ee9 5
+2025-06-04 23:48:44,099 - \u274c G\u1ecdi API th\u1ea5t b\u1ea1i sau nhi\u1ec1u l\u1ea7n th\u1eed: RetryError[<Future at 0x2110d96be10 state=finished raised HTTPError>]
+2025-06-04 23:48:51,073 - L\u1ea7n g\u1ecdi API th\u1ee9 1
+2025-06-04 23:48:52,067 - \u2705 Thành công
