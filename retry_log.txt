@@ -6,3 +6,11 @@
 2025-06-04 23:48:44,099 - \u274c G\u1ecdi API th\u1ea5t b\u1ea1i sau nhi\u1ec1u l\u1ea7n th\u1eed: RetryError[<Future at 0x2110d96be10 state=finished raised HTTPError>]
 2025-06-04 23:48:51,073 - L\u1ea7n g\u1ecdi API th\u1ee9 1
 2025-06-04 23:48:52,067 - \u2705 Thành công
+2025-06-05 08:19:24,408 - Lan goi API thu 1
+2025-06-05 08:19:27,607 - Lan goi API thu 2
+2025-06-05 08:19:30,572 - Lan goi API thu 3
+2025-06-05 08:19:33,596 - Lan goi API thu 4
+2025-06-05 08:19:36,558 - Lan goi API thu 5
+2025-06-05 08:19:37,547 - Goi API that bai sau nhieu lan thu: RetryError[<Future at 0x2ac9a8bbe10 state=finished raised HTTPError>]
+2025-06-05 08:19:50,832 - Lan goi API thu 1
+2025-06-05 08:19:51,860 - Thanh Cong
