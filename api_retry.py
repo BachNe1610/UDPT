@@ -1,21 +1,33 @@
+
 import requests
+import logging
 from tenacity import retry, stop_after_attempt, wait_fixed, retry_if_exception_type
 
+# Thiết lập ghi log vào file
+logging.basicConfig(filename="retry_log.txt", level=logging.INFO, format="%(asctime)s - %(message)s")
+
+call_count = {"count": 0}
+
 @retry(
-    stop=stop_after_attempt(5),             
-    wait=wait_fixed(2),                    
-    retry=retry_if_exception_type(requests.exceptions.RequestException)
+    stop=stop_after_attempt(5),
+    wait=wait_fixed(2),
+    retry=retry_if_exception_type(requests.exceptions.RequestException),
 )
 def fetch_data():
-    print("Đang gọi API...")
-    response = requests.get("https://httpstat.us/500")  
-    # response = requests.get("https://httpstat.us/200") 
+    call_count["count"] += 1
+    logging.info(f"Lần gọi API thứ {call_count['count']}")
+    print(f"Lần gọi API thứ {call_count['count']}...")
 
-    response.raise_for_status() 
+    response = requests.get("https://httpstat.us/500")  
+    response.raise_for_status()
     return response.text
 
-try:
-    data = fetch_data()
-    print("Thành công:", data)
-except Exception as e:
-    print("❌ Gọi API thất bại sau nhiều lần thử:", str(e))
+if __name__ == "__main__":
+    try:
+        data = fetch_data()
+        print("✅ Thành công:", data)
+        logging.info("✅ Thành công")
+    except Exception as e:
+        error_msg = f"❌ Gọi API thất bại sau nhiều lần thử: {str(e)}"
+        print(error_msg)
+        logging.error(error_msg)
